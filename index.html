@@ -336,7 +336,7 @@
     { name: "MAME Capital", slug: "mamecapital", url: "https://mamecapital.com/", cat: "elementor", label: "Elementor", desc: "Zürich-based financial services firm for real estate and private markets." },
     { name: "Atomise", slug: "atomise", url: "https://atomise.com/", cat: "elementor", label: "Elementor", desc: "UK software and fintech consultancy based in York." },
     { name: "Yamama Agriculture", slug: "yamamaagri", url: "https://yamamaagri.com/", cat: "elementor", label: "Elementor", desc: "Jordanian manufacturer of farm pesticides and animal medicines." },
-    { name: "Premier Online", slug: "premieronline", url: "https://po.scdwsites.com/", cat: "elementor", label: "Elementor", desc: "Business website built with Elementor (client staging site)." },
+    { name: "Premier Online", slug: "premieronline", img: "images/premieronline.jpg", url: "https://po.scdwsites.com/", cat: "elementor", label: "Elementor", desc: "Sports events platform for race registrations and event management. Built with Elementor." },
     { name: "Hart Safety", slug: "hartsafety", url: "https://hartsafety.com/", cat: "avada", label: "Avada", desc: "Australian safe-access and construction safety company. Built with Avada." },
     { name: "IntelliShift", slug: "intellishift", url: "https://intellishift.com/", cat: "divi", label: "Divi", desc: "US fleet management and telematics software company. Built with Divi." },
     { name: "Emesent", slug: "emesent", url: "https://emesent.com/", cat: "kadence", label: "Kadence", desc: "Australian LiDAR mapping technology company. Built with Kadence." }
@@ -351,7 +351,7 @@
     <a class="work-card" data-cat="${p.cat}" href="${p.url}" target="_blank" rel="noopener">
       <div class="frame">
         <div class="frame-bar"><span></span><span></span><span></span><small>${host(p.url)}</small></div>
-        <div class="shot" data-url="${p.url}" data-slug="${p.slug}"><img alt="${p.name} website screenshot"><div class="fallback"><span>${p.name.charAt(0)}</span><small>Click to view live site ↗</small></div></div>
+        <div class="shot" data-url="${p.url}" data-slug="${p.slug}"${p.img ? ` data-img="${p.img}"` : ''}><img alt="${p.name} website screenshot"><div class="fallback"><span>${p.name.charAt(0)}</span><small>Click to view live site ↗</small></div></div>
       </div>
       <div class="body">
         <h3>${p.name}</h3>
