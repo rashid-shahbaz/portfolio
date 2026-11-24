@@ -21,6 +21,8 @@
   html{scroll-behavior:smooth}
   body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
+  a:focus{outline:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
   img{max-width:100%;display:block}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
   h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.15;letter-spacing:-.02em}
@@ -55,7 +57,7 @@
   .hero h1 em{font-style:normal;color:var(--accent)}
   .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin:22px 0 34px}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px;max-width:860px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px;max-width:680px}
   .stat{border-left:2px solid var(--line);padding-left:16px}
   .stat b{display:block;font-family:"Space Grotesk",sans-serif;font-size:2rem;color:var(--text)}
   .stat span{font-size:.88rem;color:var(--muted)}
@@ -125,6 +127,9 @@
   .tl .when{font-size:.85rem;color:var(--accent2);font-weight:600}
   .tl h3{font-size:1.2rem;margin:2px 0}
   .tl .where{color:var(--muted);font-size:.95rem}
+  .tl .where a{color:var(--text);font-weight:500;border-bottom:1px solid rgba(110,242,196,.35);display:inline-flex;align-items:center;gap:6px;transition:color .15s,border-color .15s}
+  .tl .where a:hover{color:var(--accent);border-color:var(--accent)}
+  .tl .where .li{width:14px;height:14px;color:#0a66c2;background:#fff;border-radius:3px}
   .tl p{color:var(--muted);font-size:.92rem;margin-top:6px;max-width:760px}
 
   /* Contact */
@@ -138,7 +143,6 @@
   @media (max-width:960px){
     .skill-grid,.work-grid{grid-template-columns:repeat(2,1fr)}
     .products{grid-template-columns:1fr}
-    .stats{grid-template-columns:repeat(2,1fr)}
     .nav-links{display:none}
   }
   @media (max-width:620px){
@@ -154,7 +158,7 @@
 
 <nav>
   <div class="wrap">
-    <a href="#" class="logo">Rashid<span>.</span>dev</a>
+    <a href="#" class="logo">Rashid Shahbaz<span>.</span></a>
     <div class="nav-links">
       <a href="#skills">Skills</a>
       <a href="#products">Products</a>
@@ -179,7 +183,6 @@
     <div class="stats">
       <div class="stat"><b>4+</b><span>Years of experience</span></div>
       <div class="stat"><b>6</b><span>Companies worked with</span></div>
-      <div class="stat"><b>8+</b><span>Page builders & themes</span></div>
       <div class="stat"><b>2</b><span>Own products live</span></div>
     </div>
   </div>
@@ -208,7 +211,7 @@
       <div class="skill-card">
         <h3><i>⚡</i>Speed, SEO & E-commerce</h3>
         <div class="tags">
-          <span class="tag">Core Web Vitals</span><span class="tag">Page Speed</span><span class="tag">Technical SEO</span><span class="tag">GA4</span><span class="tag">Tag Manager</span><span class="tag">Search Console</span><span class="tag">CheckoutChamp</span><span class="tag">Everflow</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Git & GitHub</span>
+          <span class="tag">Core Web Vitals</span><span class="tag">Page Speed</span><span class="tag">Technical SEO</span><span class="tag">Google Analytics (GA4)</span><span class="tag">Google Tag Manager (GTM)</span><span class="tag">Search Console</span><span class="tag">CheckoutChamp Funnels</span><span class="tag">Everflow</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Git & GitHub</span>
         </div>
       </div>
     </div>
@@ -226,7 +229,7 @@
       <a class="product" href="https://smartparho.com/" target="_blank" rel="noopener">
         <div class="frame">
           <div class="frame-bar"><span></span><span></span><span></span><small>smartparho.com</small></div>
-          <div class="shot" data-url="https://smartparho.com/" data-slug="smartparho"><img alt="SmartParho website screenshot" loading="lazy"><div class="fallback"><span>SP</span><small>Click to view live site ↗</small></div></div>
+          <div class="shot" data-url="https://smartparho.com/" data-slug="smartparho" data-img="images/smartparho.jpg"><img alt="SmartParho website screenshot"><div class="fallback"><span>SP</span><small>Click to view live site ↗</small></div></div>
         </div>
         <div class="body">
           <span class="badge">Next.js · AI-assisted</span>
@@ -243,7 +246,7 @@
       <a class="product" href="https://pakexcise.com/" target="_blank" rel="noopener">
         <div class="frame">
           <div class="frame-bar"><span></span><span></span><span></span><small>pakexcise.com</small></div>
-          <div class="shot" data-url="https://pakexcise.com/" data-slug="pakexcise"><img alt="PakExcise website screenshot" loading="lazy"><div class="fallback"><span>PE</span><small>Click to view live site ↗</small></div></div>
+          <div class="shot" data-url="https://pakexcise.com/" data-slug="pakexcise"><img alt="PakExcise website screenshot"><div class="fallback"><span>PE</span><small>Click to view live site ↗</small></div></div>
         </div>
         <div class="body">
           <span class="badge">Next.js · AI-assisted</span>
@@ -266,10 +269,11 @@
     <div class="section-head">
       <div class="eyebrow">Client work</div>
       <h2>Selected websites</h2>
-      <p>Websites I developed for clients in the USA, UK, Europe, the Middle East and Australia while working at agencies.</p>
+      <p>Websites and e-commerce sales funnels I developed for clients in the USA, UK, Europe, the Middle East and Australia.</p>
     </div>
     <div class="filters" role="group" aria-label="Filter projects">
       <button class="filter" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="funnel" aria-pressed="false">CheckoutChamp Funnels</button>
       <button class="filter" data-filter="custom" aria-pressed="false">Custom Theme</button>
       <button class="filter" data-filter="elementor" aria-pressed="false">Elementor</button>
       <button class="filter" data-filter="avada" aria-pressed="false">Avada</button>
@@ -292,11 +296,12 @@
       <h2>Experience</h2>
     </div>
     <div class="timeline">
-      <div class="tl"><div class="when">May 2026 – Nov 2026</div><h3>Frontend Developer – E-commerce</h3><div class="where">Mau5Tech</div><p>Built sales funnels, checkout and upsell pages on CheckoutChamp and set up Everflow affiliate tracking for e-commerce brands.</p></div>
-      <div class="tl"><div class="when">Jun 2025 – May 2026</div><h3>Frontend & WordPress Developer</h3><div class="where">Hybrid Mediaworks, Islamabad</div><p>Custom WordPress themes with ACF Pro, Elementor, Avada, WPBakery and Kadence sites, Core Web Vitals and technical SEO.</p></div>
-      <div class="tl"><div class="when">Mar 2024 – May 2025</div><h3>Frontend WordPress Developer</h3><div class="where">Developers Hub (Pvt.) Ltd, Islamabad</div><p>Custom WordPress sites with ACF and modern builders, Figma to pixel-perfect pages, Shopify and WooCommerce stores.</p></div>
-      <div class="tl"><div class="when">May 2023 – Mar 2024</div><h3>Frontend Developer</h3><div class="where">Node Agency, Islamabad</div><p>Custom WordPress themes, Elementor and Gutenberg sites, and custom websites with HTML, CSS, JavaScript, PHP and MySQL.</p></div>
-      <div class="tl"><div class="when">Aug 2022 – Apr 2023</div><h3>Frontend / Web Developer</h3><div class="where">PITB Regional Plan 9 · Virtoxed Technologies, Rawalpindi</div><p>Launched a startup project under the Punjab IT Board and built responsive sites on WordPress and Wix, plus AJAX features and Python scrapers.</p></div>
+      <div class="tl"><div class="when">May 2026 – Nov 2026</div><h3>Frontend Developer – E-commerce</h3><div class="where"><a href="https://www.linkedin.com/company/mau5tech/" target="_blank" rel="noopener" title="Mau5Tech on LinkedIn">Mau5Tech<svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div><p>Built sales funnels, checkout and upsell pages on CheckoutChamp and set up Everflow affiliate tracking for direct-to-consumer e-commerce brands.</p></div>
+      <div class="tl"><div class="when">Jun 2025 – May 2026</div><h3>Frontend & WordPress Developer</h3><div class="where"><a href="https://www.linkedin.com/company/hybrid-mediaworks/" target="_blank" rel="noopener" title="Hybrid Mediaworks on LinkedIn">Hybrid Mediaworks<svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>, Islamabad</div><p>Custom WordPress themes with ACF Pro, Elementor, Avada, WPBakery and Kadence sites, Core Web Vitals and technical SEO.</p></div>
+      <div class="tl"><div class="when">Mar 2024 – May 2025</div><h3>Frontend WordPress Developer</h3><div class="where"><a href="https://www.linkedin.com/company/developershub-hq/" target="_blank" rel="noopener" title="Developers Hub (Pvt.) Ltd on LinkedIn">Developers Hub (Pvt.) Ltd<svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>, Islamabad</div><p>Custom WordPress sites with ACF and modern builders, Figma to pixel-perfect pages, Shopify and WooCommerce stores.</p></div>
+      <div class="tl"><div class="when">May 2023 – Mar 2024</div><h3>Frontend Developer</h3><div class="where"><a href="https://www.linkedin.com/company/node-agency-llc/" target="_blank" rel="noopener" title="Node Agency on LinkedIn">Node Agency<svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>, Islamabad</div><p>Custom WordPress themes, Elementor and Gutenberg sites, and custom websites with HTML, CSS, JavaScript, PHP and MySQL.</p></div>
+      <div class="tl"><div class="when">Feb 2023 – Apr 2023</div><h3>Web Developer Intern</h3><div class="where"><a href="https://www.linkedin.com/company/virtoxed/" target="_blank" rel="noopener" title="Virtoxed Technologies on LinkedIn">Virtoxed Technologies<svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>, Rawalpindi</div><p>Built CRUD features and dynamic functionality with AJAX, and web scrapers in Python (BeautifulSoup).</p></div>
+      <div class="tl"><div class="when">Aug 2022 – Jan 2023</div><h3>Frontend Developer</h3><div class="where"><a href="https://www.linkedin.com/company/punjab-information-technology-board/" target="_blank" rel="noopener" title="Punjab Information Technology Board (PITB) – Regional Plan 9 on LinkedIn">Punjab Information Technology Board (PITB) – Regional Plan 9<svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>, Rawalpindi</div><p>Built and launched a startup project under the Punjab IT Board's Regional Plan 9 program, and responsive websites on WordPress and Wix.</p></div>
     </div>
   </div>
 </section>
@@ -311,7 +316,6 @@
         <a class="btn btn-primary" href="mailto:rashidshahbazsharif@gmail.com">✉ rashidshahbazsharif@gmail.com</a>
         <a class="btn btn-ghost" href="https://wa.me/923413110094" target="_blank" rel="noopener">WhatsApp +92 341 3110094</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/rashid-shahbaz-sharif/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/rashid-shahbaz" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </div>
@@ -323,12 +327,13 @@
   // ---- Edit your projects here ----
   const projects = [
     { name: "Brown Chiari LLP", slug: "brownchiari", url: "https://www.brownchiari.com/", cat: "custom", label: "Custom Theme", desc: "Personal injury law firm in New York, USA. Custom WordPress theme built with ACF Pro." },
-    { name: "Soho", slug: "soho", url: "https://soho.ussl.co.il/", cat: "custom", label: "Custom Theme", desc: "Custom WordPress theme with ACF-driven, editable sections for a client in Israel." },
+    { name: "Derma Dream – SpotLight Mist", slug: "dd-spotlight-mist", url: "https://sale.mydermadream.com/cc417-spotlight-mist-sp1", cat: "funnel", label: "CheckoutChamp", desc: "Skincare sales funnel on CheckoutChamp with a countdown offer, bundle pricing and one-click checkout." },
+    { name: "Derma Dream – DermaFiller", slug: "dd-dermafiller", url: "https://sale.mydermadream.com/ff22-dermafiller-sp1", cat: "funnel", label: "CheckoutChamp", desc: "Mobile-first product sales page on CheckoutChamp with bundle offers and conversion tracking." },
+    { name: "Derma Dream – LipFill", slug: "dd-lipfill", url: "https://sale.mydermadream.com/cc520-lipfill-sp2h", cat: "funnel", label: "CheckoutChamp", desc: "E-commerce sales funnel on CheckoutChamp for a lip-care product, built for fast mobile checkout." },
     { name: "Seattle CC", slug: "seattlecc", url: "https://seattlecc.com/", cat: "elementor", label: "Elementor", desc: "Convention and events venue in Seattle, USA. Responsive Elementor build." },
     { name: "Mazimigo", slug: "mazimigo", url: "https://mazimigo.com/", cat: "elementor", label: "Elementor", desc: "Creative and digital agency in Dubai and Beirut. Animated Elementor website." },
     { name: "Markhor Strategies", slug: "markhorstrategies", url: "https://markhorstrategies.com/", cat: "elementor", label: "Elementor", desc: "E-commerce sourcing, quality control and fulfillment company in China." },
     { name: "MAME Capital", slug: "mamecapital", url: "https://mamecapital.com/", cat: "elementor", label: "Elementor", desc: "Zürich-based financial services firm for real estate and private markets." },
-    { name: "Benton", slug: "benton", url: "https://www.benton.ie/", cat: "elementor", label: "Elementor", desc: "Business website for an Irish company, built with Elementor." },
     { name: "Atomise", slug: "atomise", url: "https://atomise.com/", cat: "elementor", label: "Elementor", desc: "UK software and fintech consultancy based in York." },
     { name: "Yamama Agriculture", slug: "yamamaagri", url: "https://yamamaagri.com/", cat: "elementor", label: "Elementor", desc: "Jordanian manufacturer of farm pesticides and animal medicines." },
     { name: "Premier Online", slug: "premieronline", url: "https://po.scdwsites.com/", cat: "elementor", label: "Elementor", desc: "Business website built with Elementor (client staging site)." },
@@ -346,7 +351,7 @@
     <a class="work-card" data-cat="${p.cat}" href="${p.url}" target="_blank" rel="noopener">
       <div class="frame">
         <div class="frame-bar"><span></span><span></span><span></span><small>${host(p.url)}</small></div>
-        <div class="shot" data-url="${p.url}" data-slug="${p.slug}"><img alt="${p.name} website screenshot" loading="lazy"><div class="fallback"><span>${p.name.charAt(0)}</span><small>Click to view live site ↗</small></div></div>
+        <div class="shot" data-url="${p.url}" data-slug="${p.slug}"><img alt="${p.name} website screenshot"><div class="fallback"><span>${p.name.charAt(0)}</span><small>Click to view live site ↗</small></div></div>
       </div>
       <div class="body">
         <h3>${p.name}</h3>
@@ -355,29 +360,36 @@
       </div>
     </a>`).join('');
 
-  // Screenshots: 1) your own image in /images (if you add one), 2) three free screenshot services, 3) letter placeholder.
-  const sources = el => {
-    const u = el.dataset.url, e = encodeURIComponent(u), list = [];
-    if (el.dataset.slug) list.push('images/' + el.dataset.slug + '.jpg');
-    list.push('https://s0.wp.com/mshots/v1/' + e + '?w=1200&h=750');
-    list.push('https://image.thum.io/get/width/1200/crop/750/noanimate/' + u);
-    list.push('https://api.microlink.io/?url=' + e + '&screenshot=true&meta=false&embed=screenshot.url');
-    return list;
-  };
+  // Images: a designed fallback image shows immediately, so no card is ever empty.
+  // Then the page tries a real screenshot (your own images/<slug>.jpg first, then WordPress mShots)
+  // and swaps it in only if a full-size image loads.
   document.querySelectorAll('.shot').forEach(el => {
     const img = el.querySelector('img');
-    const list = sources(el);
-    let i = 0, retried = false;
-    const next = () => { i++; if (i < list.length) img.src = list[i]; else el.classList.add('failed'); };
-    img.onerror = next;
-    img.onload = () => {
-      // mShots first returns a small "generating" image; wait and ask again once.
-      if (list[i].includes('mshots') && img.naturalWidth < 1000) {
-        if (!retried) { retried = true; setTimeout(() => { img.src = list[i] + '&r=' + Date.now(); }, 6000); }
-        else next();
-      }
+    const slug = el.dataset.slug;
+    const fallback = 'images/fallback/' + slug + '.svg';
+    img.onerror = () => {
+      if (!img.src.includes('/fallback/')) img.src = fallback;
+      else el.classList.add('failed');
     };
-    img.src = list[0];
+    if (el.dataset.img) { img.src = el.dataset.img; return; }
+    img.src = fallback;
+    const tries = ['images/' + slug + '.jpg',
+      'https://s0.wp.com/mshots/v1/' + encodeURIComponent(el.dataset.url) + '?w=1200&h=750'];
+    let i = 0, retried = false;
+    const attempt = () => {
+      if (i >= tries.length) return;
+      const src = tries[i], test = new Image();
+      test.onload = () => {
+        if (test.naturalWidth >= 1000) { img.src = src; return; }
+        if (src.includes('mshots') && !retried) {
+          retried = true;
+          setTimeout(() => { tries[i] = src.split('&r=')[0] + '&r=' + Date.now(); attempt(); }, 6000);
+        } else { i++; attempt(); }
+      };
+      test.onerror = () => { i++; attempt(); };
+      test.src = src;
+    };
+    attempt();
   });
 
   // Filters with counts

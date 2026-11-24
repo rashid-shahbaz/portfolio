@@ -2,7 +2,7 @@
 
 Frontend & WordPress Developer · Islamabad, Pakistan
 
-🔗 **Live site:** https://rashid-shahbaz.github.io
+🔗 **Live site:** https://rashid-shahbaz.github.io/portfolio/
 
 This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built with Elementor, Avada, Divi and Kadence, and my own Next.js products, SmartParho and PakExcise.
 
@@ -10,8 +10,9 @@ This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built
 
 | Type | Projects |
 |---|---|
-| Custom WordPress Theme | [Brown Chiari](https://www.brownchiari.com/), [Soho](https://soho.ussl.co.il/) |
-| Elementor | [Seattle CC](https://seattlecc.com/), [Mazimigo](https://mazimigo.com/), [Markhor Strategies](https://markhorstrategies.com/), [MAME Capital](https://mamecapital.com/), [Benton](https://www.benton.ie/), [Atomise](https://atomise.com/), [Yamama Agriculture](https://yamamaagri.com/), [Premier Online](https://po.scdwsites.com/) |
+| CheckoutChamp Funnels (E-commerce) | [SpotLight Mist](https://sale.mydermadream.com/cc417-spotlight-mist-sp1), [DermaFiller](https://sale.mydermadream.com/ff22-dermafiller-sp1), [LipFill](https://sale.mydermadream.com/cc520-lipfill-sp2h) |
+| Custom WordPress Theme | [Brown Chiari](https://www.brownchiari.com/) |
+| Elementor | [Seattle CC](https://seattlecc.com/), [Mazimigo](https://mazimigo.com/), [Markhor Strategies](https://markhorstrategies.com/), [MAME Capital](https://mamecapital.com/), [Atomise](https://atomise.com/), [Yamama Agriculture](https://yamamaagri.com/), [Premier Online](https://po.scdwsites.com/) |
 | Avada | [Hart Safety](https://hartsafety.com/) |
 | Divi | [IntelliShift](https://intellishift.com/) |
 | Kadence | [Emesent](https://emesent.com/) |
