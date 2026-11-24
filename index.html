@@ -8,6 +8,8 @@
 <meta property="og:title" content="Rashid Shahbaz Sharif — Frontend & WordPress Developer">
 <meta property="og:description" content="Custom WordPress themes, page-builder websites and Next.js products. 4+ years of experience.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://rashid-shahbaz.github.io/portfolio/images/rashid-shahbaz.jpg">
+<meta property="og:url" content="https://rashid-shahbaz.github.io/portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -53,7 +55,13 @@
   .status{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);margin-bottom:28px;background:var(--bg2)}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(110,242,196,.18);animation:pulse 2s infinite}
   @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(110,242,196,0)}}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);max-width:900px}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:56px;align-items:center;position:relative;z-index:1}
+  .hero-photo{position:relative;margin:0;justify-self:end;width:100%;max-width:400px}
+  .hero-photo::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid rgba(110,242,196,.45);border-radius:28px}
+  .hero-photo img{position:relative;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:24px;border:1px solid var(--line);box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+  .hero-photo figcaption{position:absolute;left:18px;right:18px;bottom:18px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:12px 16px;border-radius:16px;background:rgba(10,15,28,.78);backdrop-filter:blur(10px);border:1px solid var(--line);font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.98rem}
+  .hero-photo figcaption small{flex-basis:100%;font-family:Inter,sans-serif;font-weight:400;font-size:.8rem;color:var(--muted);padding-left:18px}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4rem);max-width:900px}
   .hero h1 em{font-style:normal;color:var(--accent)}
   .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin:22px 0 34px}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
@@ -141,6 +149,9 @@
   footer{padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line)}
 
   @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-photo{order:-1;justify-self:start;max-width:260px;margin-left:14px}
+    .hero{padding-top:70px}
     .skill-grid,.work-grid{grid-template-columns:repeat(2,1fr)}
     .products{grid-template-columns:1fr}
     .nav-links{display:none}
@@ -171,7 +182,8 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
     <div class="status"><span class="dot"></span> Available for full-time & remote roles</div>
     <h1>Hi, I'm Rashid — I build <em>fast, pixel-perfect</em> WordPress & frontend websites.</h1>
     <p class="lead">Frontend & WordPress Developer from Islamabad with 4+ years of experience. I build custom themes with ACF Pro, sites with every major page builder, WooCommerce stores and high-converting e-commerce funnels. I've also launched my own products with Next.js.</p>
@@ -185,6 +197,11 @@
       <div class="stat"><b>6</b><span>Companies worked with</span></div>
       <div class="stat"><b>2</b><span>Own products live</span></div>
     </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="images/rashid-shahbaz.jpg" alt="Rashid Shahbaz Sharif, Frontend & WordPress Developer" width="800" height="1000">
+      <figcaption><span class="dot"></span> Rashid Shahbaz Sharif<small>Frontend & WordPress Developer · Islamabad</small></figcaption>
+    </figure>
   </div>
 </header>
 
