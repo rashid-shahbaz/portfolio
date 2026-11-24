@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashid Shahbaz Sharif — Frontend & WordPress Developer</title>
+<meta name="description" content="Portfolio of Rashid Shahbaz Sharif, Frontend & WordPress Developer in Islamabad, Pakistan. Custom WordPress themes (ACF Pro), Elementor, Divi, Avada, Kadence, WooCommerce and Next.js projects.">
+<meta property="og:title" content="Rashid Shahbaz Sharif — Frontend & WordPress Developer">
+<meta property="og:description" content="Custom WordPress themes, page-builder websites and Next.js products. 4+ years of experience.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0f1c; --bg2:#0f1628; --card:#131c33; --line:#222e4d;
+    --text:#e8ecf6; --muted:#9aa6c4; --accent:#6ef2c4; --accent2:#ffb86b;
+    --radius:16px; --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.15;letter-spacing:-.02em}
+  .eyebrow{font-family:"Space Grotesk",sans-serif;color:var(--accent);font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+  section{padding:96px 0}
+  .section-head{margin-bottom:40px;max-width:720px}
+  .section-head h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:10px 0 12px}
+  .section-head p{color:var(--muted)}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(10,15,28,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.15rem}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:28px;font-size:.95rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .15s,background .15s,border-color .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#06281d}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--accent)}
+  .nav-cta{padding:9px 18px;font-size:.88rem}
+
+  /* Hero */
+  .hero{padding:110px 0 90px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:620px;height:620px;right:-160px;top:-180px;background:radial-gradient(circle,rgba(110,242,196,.18),transparent 65%);pointer-events:none}
+  .hero::after{content:"";position:absolute;width:480px;height:480px;left:-200px;bottom:-240px;background:radial-gradient(circle,rgba(255,184,107,.12),transparent 65%);pointer-events:none}
+  .status{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);margin-bottom:28px;background:var(--bg2)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(110,242,196,.18);animation:pulse 2s infinite}
+  @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(110,242,196,0)}}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);max-width:900px}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin:22px 0 34px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px;max-width:860px}
+  .stat{border-left:2px solid var(--line);padding-left:16px}
+  .stat b{display:block;font-family:"Space Grotesk",sans-serif;font-size:2rem;color:var(--text)}
+  .stat span{font-size:.88rem;color:var(--muted)}
+
+  /* Skills */
+  .skills{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .skill-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .skill-card h3{font-size:1.15rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .skill-card h3 i{font-style:normal;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(110,242,196,.12);color:var(--accent);font-size:1rem}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-size:.8rem;padding:5px 11px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);color:var(--muted)}
+
+  /* Products */
+  .products{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .product{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+  .product:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .product .body{padding:26px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .product h3{font-size:1.5rem}
+  .product p{color:var(--muted);font-size:.97rem}
+  .product ul{list-style:none;display:grid;gap:6px;font-size:.92rem;color:var(--muted)}
+  .product li::before{content:"→ ";color:var(--accent)}
+  .badge{align-self:flex-start;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(255,184,107,.14);color:var(--accent2);letter-spacing:.03em}
+  .visit{margin-top:auto;padding-top:6px;color:var(--accent);font-weight:600;font-size:.95rem}
+
+  /* Browser frame thumbnails */
+  .frame{background:#0d1324;border-bottom:1px solid var(--line)}
+  .frame-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line)}
+  .frame-bar span{width:9px;height:9px;border-radius:50%;background:#2c3757}
+  .frame-bar span:nth-child(1){background:#ff6b6b}
+  .frame-bar span:nth-child(2){background:#ffcf5c}
+  .frame-bar span:nth-child(3){background:#58d68d}
+  .frame-bar small{margin-left:10px;font-size:.75rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .shot{aspect-ratio:16/10;overflow:hidden;position:relative;background:linear-gradient(135deg,#17213d,#0f1628)}
+  .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 4s ease}
+  .work-card:hover .shot img,.product:hover .shot img{transform:scale(1.04)}
+  .shot .fallback{position:absolute;inset:0;display:none;place-items:center;font-family:"Space Grotesk",sans-serif;font-size:3rem;font-weight:700;color:var(--accent);opacity:.6}
+  .shot.failed img{display:none}
+  .shot.failed .fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+  .shot .fallback small{font-family:Inter,sans-serif;font-size:.8rem;font-weight:500;color:var(--muted);opacity:1}
+
+  /* Work grid */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+  .filter{background:transparent;border:1px solid var(--line);color:var(--muted);padding:9px 18px;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer;transition:all .15s}
+  .filter:hover{color:var(--text);border-color:var(--muted)}
+  .filter[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#06281d;font-weight:600}
+  .filter .count{opacity:.7;margin-left:4px;font-size:.8rem}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .work-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+  .work-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .work-card.hide{display:none}
+  .work-card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .work-card h3{font-size:1.1rem}
+  .work-card p{font-size:.88rem;color:var(--muted)}
+  .work-card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+  .work-card .meta .tag{color:var(--accent);border-color:rgba(110,242,196,.3)}
+  .work-card .meta a{font-size:.85rem;font-weight:600;color:var(--accent)}
+  .more-note{margin-top:36px;padding:24px 28px;border:1px dashed var(--line);border-radius:var(--radius);display:flex;gap:18px;align-items:center;background:var(--bg2)}
+  .more-note b{font-family:"Space Grotesk",sans-serif;font-size:2.2rem;color:var(--accent2);line-height:1}
+  .more-note p{color:var(--muted)}
+  .more-note p strong{color:var(--text)}
+
+  /* Experience */
+  .timeline{border-left:2px solid var(--line);margin-left:8px;display:grid;gap:30px}
+  .tl{position:relative;padding-left:30px}
+  .tl::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .tl .when{font-size:.85rem;color:var(--accent2);font-weight:600}
+  .tl h3{font-size:1.2rem;margin:2px 0}
+  .tl .where{color:var(--muted);font-size:.95rem}
+  .tl p{color:var(--muted);font-size:.92rem;margin-top:6px;max-width:760px}
+
+  /* Contact */
+  .contact{background:var(--bg2);border-top:1px solid var(--line)}
+  .contact-box{background:linear-gradient(135deg,rgba(110,242,196,.1),rgba(255,184,107,.06));border:1px solid var(--line);border-radius:24px;padding:56px;text-align:center}
+  .contact-box h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 14px}
+  .contact-box p{color:var(--muted);max-width:560px;margin:0 auto 30px}
+  .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+  footer{padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line)}
+
+  @media (max-width:960px){
+    .skill-grid,.work-grid{grid-template-columns:repeat(2,1fr)}
+    .products{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .nav-links{display:none}
+  }
+  @media (max-width:620px){
+    section{padding:72px 0}
+    .skill-grid,.work-grid{grid-template-columns:1fr}
+    .contact-box{padding:36px 22px}
+    .more-note{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Rashid<span>.</span>dev</a>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#products">Products</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="Rashid_Shahbaz_Sharif_CV.pdf" class="btn btn-primary nav-cta" download>Download CV</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Available for full-time & remote roles</div>
+    <h1>Hi, I'm Rashid — I build <em>fast, pixel-perfect</em> WordPress & frontend websites.</h1>
+    <p class="lead">Frontend & WordPress Developer from Islamabad with 4+ years of experience. I build custom themes with ACF Pro, sites with every major page builder, WooCommerce stores and high-converting e-commerce funnels. I've also launched my own products with Next.js.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View my work ↓</a>
+      <a href="Rashid_Shahbaz_Sharif_CV.pdf" class="btn btn-ghost" download>Download CV</a>
+      <a href="#contact" class="btn btn-ghost">Contact me</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>4+</b><span>Years of experience</span></div>
+      <div class="stat"><b>6</b><span>Companies worked with</span></div>
+      <div class="stat"><b>8+</b><span>Page builders & themes</span></div>
+      <div class="stat"><b>2</b><span>Own products live</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="skills" class="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What I do</div>
+      <h2>Skills & tools</h2>
+      <p>From custom WordPress themes to e-commerce funnels, I focus on clean code, speed and SEO.</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <h3><i>W</i>WordPress</h3>
+        <div class="tags">
+          <span class="tag">Custom Themes</span><span class="tag">ACF Pro</span><span class="tag">WooCommerce</span><span class="tag">Gutenberg</span><span class="tag">Elementor</span><span class="tag">Divi</span><span class="tag">Avada</span><span class="tag">Kadence</span><span class="tag">WPBakery</span><span class="tag">Breakdance</span><span class="tag">Spectra</span><span class="tag">Shopify</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3><i>&lt;/&gt;</i>Frontend</h3>
+        <div class="tags">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript (ES6+)</span><span class="tag">jQuery</span><span class="tag">AJAX</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span><span class="tag">SCSS</span><span class="tag">Swiper JS</span><span class="tag">Figma to Code</span><span class="tag">React / Next.js (working knowledge)</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3><i>⚡</i>Speed, SEO & E-commerce</h3>
+        <div class="tags">
+          <span class="tag">Core Web Vitals</span><span class="tag">Page Speed</span><span class="tag">Technical SEO</span><span class="tag">GA4</span><span class="tag">Tag Manager</span><span class="tag">Search Console</span><span class="tag">CheckoutChamp</span><span class="tag">Everflow</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Git & GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">My own products</div>
+      <h2>Products I planned & launched</h2>
+      <p>Two live websites I own. I planned the features, design, content and SEO, and built them with Next.js using AI-assisted development.</p>
+    </div>
+    <div class="products">
+      <a class="product" href="https://smartparho.com/" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="frame-bar"><span></span><span></span><span></span><small>smartparho.com</small></div>
+          <div class="shot" data-url="https://smartparho.com/" data-slug="smartparho"><img alt="SmartParho website screenshot" loading="lazy"><div class="fallback"><span>SP</span><small>Click to view live site ↗</small></div></div>
+        </div>
+        <div class="body">
+          <span class="badge">Next.js · AI-assisted</span>
+          <h3>SmartParho</h3>
+          <p>A free study library for Pakistani students in Classes 1–12, covering six education boards.</p>
+          <ul>
+            <li>Textbooks, notes and past papers with board, class and subject filters</li>
+            <li>Online PDF reader, accounts, bookmarks and a study dashboard</li>
+            <li>Teacher uploads with an admin review step</li>
+          </ul>
+          <span class="visit">Visit website ↗</span>
+        </div>
+      </a>
+      <a class="product" href="https://pakexcise.com/" target="_blank" rel="noopener">
+        <div class="frame">
+          <div class="frame-bar"><span></span><span></span><span></span><small>pakexcise.com</small></div>
+          <div class="shot" data-url="https://pakexcise.com/" data-slug="pakexcise"><img alt="PakExcise website screenshot" loading="lazy"><div class="fallback"><span>PE</span><small>Click to view live site ↗</small></div></div>
+        </div>
+        <div class="body">
+          <span class="badge">Next.js · AI-assisted</span>
+          <h3>PakExcise</h3>
+          <p>A service website that helps people with vehicle registration, transfer and token tax across Pakistan.</p>
+          <ul>
+            <li>Service pages for every province</li>
+            <li>Quote request form with WhatsApp integration</li>
+            <li>SEO-optimized pages and error monitoring</li>
+          </ul>
+          <span class="visit">Visit website ↗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Client work</div>
+      <h2>Selected websites</h2>
+      <p>Websites I developed for clients in the USA, UK, Europe, the Middle East and Australia while working at agencies.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="custom" aria-pressed="false">Custom Theme</button>
+      <button class="filter" data-filter="elementor" aria-pressed="false">Elementor</button>
+      <button class="filter" data-filter="avada" aria-pressed="false">Avada</button>
+      <button class="filter" data-filter="divi" aria-pressed="false">Divi</button>
+      <button class="filter" data-filter="kadence" aria-pressed="false">Kadence</button>
+    </div>
+    <div class="work-grid" id="workGrid"></div>
+
+    <div class="more-note">
+      <b>+</b>
+      <p><strong>These are just the websites I could remember.</strong> I've built many more over 4+ years, including client sites under NDA, sites that have since been redesigned, and staging projects. I'm happy to walk you through more work in an interview.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Career</div>
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl"><div class="when">May 2026 – Nov 2026</div><h3>Frontend Developer – E-commerce</h3><div class="where">Mau5Tech</div><p>Built sales funnels, checkout and upsell pages on CheckoutChamp and set up Everflow affiliate tracking for e-commerce brands.</p></div>
+      <div class="tl"><div class="when">Jun 2025 – May 2026</div><h3>Frontend & WordPress Developer</h3><div class="where">Hybrid Mediaworks, Islamabad</div><p>Custom WordPress themes with ACF Pro, Elementor, Avada, WPBakery and Kadence sites, Core Web Vitals and technical SEO.</p></div>
+      <div class="tl"><div class="when">Mar 2024 – May 2025</div><h3>Frontend WordPress Developer</h3><div class="where">Developers Hub (Pvt.) Ltd, Islamabad</div><p>Custom WordPress sites with ACF and modern builders, Figma to pixel-perfect pages, Shopify and WooCommerce stores.</p></div>
+      <div class="tl"><div class="when">May 2023 – Mar 2024</div><h3>Frontend Developer</h3><div class="where">Node Agency, Islamabad</div><p>Custom WordPress themes, Elementor and Gutenberg sites, and custom websites with HTML, CSS, JavaScript, PHP and MySQL.</p></div>
+      <div class="tl"><div class="when">Aug 2022 – Apr 2023</div><h3>Frontend / Web Developer</h3><div class="where">PITB Regional Plan 9 · Virtoxed Technologies, Rawalpindi</div><p>Launched a startup project under the Punjab IT Board and built responsive sites on WordPress and Wix, plus AJAX features and Python scrapers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="eyebrow">Let's work together</div>
+      <h2>Looking for a WordPress or Frontend Developer?</h2>
+      <p>I'm available for full-time, remote and on-site roles in Islamabad or Lahore. Send me a message and I'll reply quickly.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:rashidshahbazsharif@gmail.com">✉ rashidshahbazsharif@gmail.com</a>
+        <a class="btn btn-ghost" href="https://wa.me/923413110094" target="_blank" rel="noopener">WhatsApp +92 341 3110094</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/rashid-shahbaz-sharif/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/rashid-shahbaz" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Rashid Shahbaz Sharif · Frontend & WordPress Developer · Islamabad, Pakistan</footer>
+
+<script>
+  // ---- Edit your projects here ----
+  const projects = [
+    { name: "Brown Chiari LLP", slug: "brownchiari", url: "https://www.brownchiari.com/", cat: "custom", label: "Custom Theme", desc: "Personal injury law firm in New York, USA. Custom WordPress theme built with ACF Pro." },
+    { name: "Soho", slug: "soho", url: "https://soho.ussl.co.il/", cat: "custom", label: "Custom Theme", desc: "Custom WordPress theme with ACF-driven, editable sections for a client in Israel." },
+    { name: "Seattle CC", slug: "seattlecc", url: "https://seattlecc.com/", cat: "elementor", label: "Elementor", desc: "Convention and events venue in Seattle, USA. Responsive Elementor build." },
+    { name: "Mazimigo", slug: "mazimigo", url: "https://mazimigo.com/", cat: "elementor", label: "Elementor", desc: "Creative and digital agency in Dubai and Beirut. Animated Elementor website." },
+    { name: "Markhor Strategies", slug: "markhorstrategies", url: "https://markhorstrategies.com/", cat: "elementor", label: "Elementor", desc: "E-commerce sourcing, quality control and fulfillment company in China." },
+    { name: "MAME Capital", slug: "mamecapital", url: "https://mamecapital.com/", cat: "elementor", label: "Elementor", desc: "Zürich-based financial services firm for real estate and private markets." },
+    { name: "Benton", slug: "benton", url: "https://www.benton.ie/", cat: "elementor", label: "Elementor", desc: "Business website for an Irish company, built with Elementor." },
+    { name: "Atomise", slug: "atomise", url: "https://atomise.com/", cat: "elementor", label: "Elementor", desc: "UK software and fintech consultancy based in York." },
+    { name: "Yamama Agriculture", slug: "yamamaagri", url: "https://yamamaagri.com/", cat: "elementor", label: "Elementor", desc: "Jordanian manufacturer of farm pesticides and animal medicines." },
+    { name: "Premier Online", slug: "premieronline", url: "https://po.scdwsites.com/", cat: "elementor", label: "Elementor", desc: "Business website built with Elementor (client staging site)." },
+    { name: "Hart Safety", slug: "hartsafety", url: "https://hartsafety.com/", cat: "avada", label: "Avada", desc: "Australian safe-access and construction safety company. Built with Avada." },
+    { name: "IntelliShift", slug: "intellishift", url: "https://intellishift.com/", cat: "divi", label: "Divi", desc: "US fleet management and telematics software company. Built with Divi." },
+    { name: "Emesent", slug: "emesent", url: "https://emesent.com/", cat: "kadence", label: "Kadence", desc: "Australian LiDAR mapping technology company. Built with Kadence." }
+  ];
+  // ----------------------------------
+
+  const grid = document.getElementById('workGrid');
+  const host = u => new URL(u).hostname.replace(/^www\./, '');
+  const shotSrc = u => 'https://s0.wp.com/mshots/v1/' + encodeURIComponent(u) + '?w=1200&h=750';
+
+  grid.innerHTML = projects.map(p => `
+    <a class="work-card" data-cat="${p.cat}" href="${p.url}" target="_blank" rel="noopener">
+      <div class="frame">
+        <div class="frame-bar"><span></span><span></span><span></span><small>${host(p.url)}</small></div>
+        <div class="shot" data-url="${p.url}" data-slug="${p.slug}"><img alt="${p.name} website screenshot" loading="lazy"><div class="fallback"><span>${p.name.charAt(0)}</span><small>Click to view live site ↗</small></div></div>
+      </div>
+      <div class="body">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="meta"><span class="tag">${p.label}</span><span style="color:var(--accent);font-weight:600;font-size:.85rem">Visit ↗</span></div>
+      </div>
+    </a>`).join('');
+
+  // Screenshots: 1) your own image in /images (if you add one), 2) three free screenshot services, 3) letter placeholder.
+  const sources = el => {
+    const u = el.dataset.url, e = encodeURIComponent(u), list = [];
+    if (el.dataset.slug) list.push('images/' + el.dataset.slug + '.jpg');
+    list.push('https://s0.wp.com/mshots/v1/' + e + '?w=1200&h=750');
+    list.push('https://image.thum.io/get/width/1200/crop/750/noanimate/' + u);
+    list.push('https://api.microlink.io/?url=' + e + '&screenshot=true&meta=false&embed=screenshot.url');
+    return list;
+  };
+  document.querySelectorAll('.shot').forEach(el => {
+    const img = el.querySelector('img');
+    const list = sources(el);
+    let i = 0, retried = false;
+    const next = () => { i++; if (i < list.length) img.src = list[i]; else el.classList.add('failed'); };
+    img.onerror = next;
+    img.onload = () => {
+      // mShots first returns a small "generating" image; wait and ask again once.
+      if (list[i].includes('mshots') && img.naturalWidth < 1000) {
+        if (!retried) { retried = true; setTimeout(() => { img.src = list[i] + '&r=' + Date.now(); }, 6000); }
+        else next();
+      }
+    };
+    img.src = list[0];
+  });
+
+  // Filters with counts
+  const buttons = document.querySelectorAll('.filter');
+  buttons.forEach(b => {
+    const f = b.dataset.filter;
+    const n = f === 'all' ? projects.length : projects.filter(p => p.cat === f).length;
+    b.insertAdjacentHTML('beforeend', `<span class="count">${n}</span>`);
+    b.addEventListener('click', () => {
+      buttons.forEach(x => x.setAttribute('aria-pressed', x === b));
+      document.querySelectorAll('.work-card').forEach(c => {
+        c.classList.toggle('hide', f !== 'all' && c.dataset.cat !== f);
+      });
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
