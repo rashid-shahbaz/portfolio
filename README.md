@@ -4,7 +4,7 @@ Frontend & WordPress Developer · Islamabad, Pakistan
 
 🔗 **Live site:** https://rashid-shahbaz.github.io/portfolio/
 
-This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built with Elementor, Avada, Divi and Kadence, and my own Next.js products, SmartParho and PakExcise.
+This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built with Elementor, Avada, Divi and Kadence, and my own Next.js products, SmartParho and Online Calculator Spot.
 
 ## Featured work
 
@@ -19,7 +19,7 @@ This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built
 | Avada | [Hart Safety](https://hartsafety.com/) |
 | Divi | [IntelliShift](https://intellishift.com/) |
 | Kadence | [Emesent](https://emesent.com/) |
-| My products (Next.js, AI-assisted) | [SmartParho](https://smartparho.com/), [PakExcise](https://pakexcise.com/) |
+| My products (Next.js, AI-assisted) | [SmartParho](https://smartparho.com/), [Online Calculator Spot](https://onlinecalculatorspot.com/) |
 
 These are only the projects I could remember. I've built many more websites over 4+ years.
 
