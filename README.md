@@ -8,6 +8,9 @@ This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built
 
 ## Featured work
 
+⭐ **Top picks:** [Emesent](https://emesent.com/) (Kadence), [IntelliShift](https://intellishift.com/) (Divi), [Hart Safety](https://hartsafety.com/) (Avada)
+
+
 | Type | Projects |
 |---|---|
 | CheckoutChamp Funnels (E-commerce) | [SpotLight Mist](https://sale.mydermadream.com/cc417-spotlight-mist-sp1), [DermaFiller](https://sale.mydermadream.com/ff22-dermafiller-sp1), [LipFill](https://sale.mydermadream.com/cc520-lipfill-sp2h) |
@@ -19,6 +22,10 @@ This is my portfolio. It shows custom WordPress themes (ACF Pro), websites built
 | My products (Next.js, AI-assisted) | [SmartParho](https://smartparho.com/), [PakExcise](https://pakexcise.com/) |
 
 These are only the projects I could remember. I've built many more websites over 4+ years.
+
+## Toolbox
+
+WordPress (custom themes, ACF Pro, Elementor, Divi, Avada, Kadence, Gutenberg, WPBakery) · WooCommerce · Shopify · CheckoutChamp · Everflow · HTML, CSS, JavaScript, jQuery, Tailwind, Bootstrap, Sass · PHP, MySQL · Google Analytics (GA4), Google Tag Manager (GTM), Google Search Console, Bing Webmaster Tools · Google AdSense, Meta Pixel, Meta Ads Manager · VPS & hosting, Cloudflare (R2, Turnstile), Amazon SES, Google Cloud Console · Git, GitHub, Figma
 
 ## Contact
 
